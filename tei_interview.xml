@@ -40,7 +40,7 @@
                 <moduleRef key="corpus"/>
                 <moduleRef key="namesdates"/>
                 <moduleRef key="linking"/>
-                <moduleRef key="spoken" except=""/>
+                <moduleRef key="spoken" except="broadcast scriptStmt"/>
                 <moduleRef key="transcr" except=""/>
             </schemaSpec>
         </body>
