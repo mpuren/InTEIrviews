@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml"
+	schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Title</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Les participants ont donné leur consentement à cet entretien et à son enregistement
+               en signant <bibl><ref target="accord-consentement.pdf"><title>l'accord de
+                        consentement</title>/></ref>, <author><orgName>GEMASS</orgName></author>
+                  <date>2021</date></bibl>.</p>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <textDesc>
+            <channel/>
+            <constitution/>
+            <derivation/>
+            <domain type="b"/>
+            <factuality/>
+            <interaction/>
+            <preparedness/>
+            <purpose type="research"/>
+         </textDesc>
+         <settingDesc>
+            <!-- Ajouter ici s'il y a eu la signature d'un consentement et où le trouver -->
+            <setting> </setting>
+            <setting> </setting>
+         </settingDesc>
+      </profileDesc>
+   </teiHeader>
+   <standOff>
+      <interpGrp>
+         <interp xml:id="sexisme">Propos sexistes</interp>
+         <interp xml:id="violences_urbaines">Violences urbaines dans des quartiers
+            populaires</interp>
+      </interpGrp>
+   </standOff>
+   <text>
+      <body>
+         <u who="enquêteur">Que pensez-vous de cette vidéo ? <writing> Je montre la vidéo : <media
+                  ana="#violences_urbaines" url="violences_urbaines.mp4" mimeType="video/mp4">
+                  <desc>Vidéo de voitures en feu</desc>
+               </media>
+            </writing></u>
+         <!-- ajouter l'attribut motivation sur <u> -->
+         <u who="enquêté"> Moi, quand je vois ça, je ne peux pas m'empêcher de penser que <seg
+               ana="#racisme">les Arabes n'ont rien à faire chez nous, à pondre des gosses pour
+               toucher les allocs !</seg>. Et de toute façon, <seg ana="#racisme">leurs femmes
+               voilées, elles ne savent rien faire de leur dix doigts, et <seg type="annotation"
+                  ana="#sexisme">comme toutes les femmes, vous me direz, elles ne savent que
+                  dépenser l'argent de leurs maris</seg>.</seg>
+            <interp xml:id="racisme">Propos racistes</interp> C'est comme cette <seg
+               type="annotation" ana="#photo_immeuble">photo</seg>
+            <figure xml:id="photo_immeuble">
+               <graphic url="photo_asso.jpg"/>
+               <figDesc>Photo d'une famille arabe et de ses voisins diffusée par l'association
+                     <orgName>Touche pas à mon pote</orgName></figDesc>
+            </figure> en bas de l'immeuble, c'est un mensonge, ils ne sont pas comme ça en vrai,
+            tout proprets et gentils! <del> Mes voisins,les Saidi, ils ont cinq enfants, <gap
+                  reason="anonymised" quantity="8" unit="words"/>
+               <desc>Donne le nom complet de personnes vivantes et des éléments permettant de les
+                  identifier</desc></del>et je vois bien qu'ils profitent des allocs pour s'acheter
+            plein de trucs. <del>Hier, ils ont reçu une nouvelle télé <gap reason="anonymised"
+                  quantity="7" unit="words"/><desc>Elements permettant d'identifier des personnes
+                  vivantes</desc></del>, et pourtant je sais bien ce qu'il fait le père... Il peut
+            pas se payer ça, c'est sûr.</u>
+         <u who="enquêteur"> Et qu'en pensent les autres membres de votre famille ? Vous m'avez dit
+            que vous en parliez souvent avec eux. </u>
+         <u who="enquêté">A ma soeur surtout, <del>Josiane<gap reason="pseudonymized" quantity="1"
+                  unit="words"/><desc>Données personnelles</desc><supplied reason="v"
+               >J</supplied></del>, c'est la seule qui comprenne vraiment.</u>
+         <gap quantity="7" unit="mns"/>
+      </body>
+   </text>
+</TEI>
