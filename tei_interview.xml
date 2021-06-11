@@ -48,6 +48,9 @@
                                 <moduleRef key="spoken" except="broadcast"/>
                                 <moduleRef key="transcr"
                                         except="damage damageSpan facsimile fw handNotes handShift line listTranspose metamark mod path redo restore retrace secl sourceDoc space subst substJoin surface surfaceGrp surplus transpose undo zone"/>
+                                <moduleRef key="figures" except="notatedMusic"/>
+                                <moduleRef key="analysis" except="c cl m pc phr s span spanGrp w"/>
+                                <moduleRef key="certainty" except=""/>
                                 <elementSpec ident="u" module="spoken" mode="change">
                                         <attList>
                                                 <attDef ident="motivation" mode="change">
