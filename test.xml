@@ -41,7 +41,7 @@
    </standOff>
    <text>
       <body>
-         <u who="enquêteur">Que pensez-vous de cette vidéo ? <writing> Je montre la vidéo : <media
+         <u who="enquêteur" purpose="launching_topic">Que pensez-vous de cette vidéo ? <writing> Je montre la vidéo : <media
                   ana="#violences_urbaines" url="violences_urbaines.mp4" mimeType="video/mp4">
                   <desc>Vidéo de voitures en feu</desc>
                </media>
