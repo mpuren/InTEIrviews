@@ -1,27 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="InTEIrviews_schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader>
+   <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Title</title>
+            <title>An Anaesthetist, APRIL 20 2016</title>
+            <funder>ESRC - Economic and Social Research Councild</funder>
          </titleStmt>
          <publicationStmt>
-            <p>Publication Information</p>
+            <authority>School of Social and Political Science, Edinburgh</authority>
+            <availability>
+               <licence>Creative Commons License: Attribution 4.0 International </licence>
+            </availability>
          </publicationStmt>
          <sourceDesc>
-            <p>Information about the source</p>
+            <recordingStmt>
+               <recording>
+                  <date> 20 April 2016 </date>
+               </recording>
+            </recordingStmt>
          </sourceDesc>
       </fileDesc>
-     <profileDesc>
-        <particDesc>
-           <person></person>
-        </particDesc>
-     </profileDesc>
-  </teiHeader>
-  <text>
+      <encodingDesc>
+         <projectDesc>
+            <p>
+               <bibl>
+                  <title>Interview data from 'new norms and forms of development', 2014-2016
+                     [dataset]</title>
+                  <author>Adhikari, Radha</author>
+                  <author>Mandambwe, Khumbo</author>
+                  <author>Smith, Pam</author>
+                  <author>Sharma, Jeevan</author>
+                  <author>Harper, Ian</author>
+                  <author>Malata, Address</author>
+                  <author>Chand, Obindra</author>
+                  <author>Thapa, Deepak</author>
+                  <date>2017</date>
+                  <publisher>School of Social and Political Science</publisher>
+                  <pubPlace>Edinburgh</pubPlace>
+                  <availability>
+                     <licence>Creative Commons License: Attribution 4.0 International </licence>
+                  </availability>
+                  <idno type="DOI">10.7488/ds/2048</idno>
+               </bibl>
+               <desc>This data contains findings of the study on outsourcing of external development
+                  assistance in maternal and child health (MCH) in Malawi and Nepal. It outlines the
+                  institutional modalities and norms guiding the financing and delivery of MCH
+                  projects and programmes. First, our study of external development assistance
+                  reveals a messy assemblage of actors, institutional arrangements and activities
+                  informed by the norms: ‘value for money’ and ‘measurable results’. Second, we
+                  found that for development assistance to function effectively it is not just about
+                  the flow of financial resources to a project or a programme but also about
+                  networks and key personal and institutional relationships. Third, we found that
+                  there is increasing political pressure to show that the disbursement of resources
+                  are linked to the achievement of measurable results. </desc>
+            </p>
+         </projectDesc>
+      </encodingDesc>
+      <profileDesc>
+         <langUsage>
+            <language ident="en"/>
+         </langUsage>
+         <settingDesc>
+            <setting>
+               <locale>Department</locale>
+               <name>Queen Elizabeth Hospital</name>
+               <placeName>Blantyre</placeName>
+            </setting>
+            <place/>
+         </settingDesc>
+         <particDesc>
+            <listPerson>
+               <person xml:id="interviewee">
+                  <!-- 
+                  <persName>
+                     <gap reason="anonymised">
+                        <desc>Anonymised firstname and lastname</desc>
+                     </gap>
+                     <supplied reason="replaced">An Anaesthetist<desc>Pseudonym used to replace the
+                           interviewee's name in the transcript</desc>
+                     </supplied>
+                  </persName>-->
+                  <occupation>Anaesthetist</occupation>
+               </person>
+               <person xml:id="interv1">
+                  <occupation>Interviewer</occupation>
+               </person>
+               <person xml:id="interv2">
+                  <occupation>Interviewer</occupation>
+               </person>
+            </listPerson>
+         </particDesc>
+      </profileDesc>
+   </teiHeader>
+   <standOff>
+      <span type="comment" target="#an_qeh1">significant investment by doctors in relation to the
+         resources available</span>
+      <spanGrp type="topic">
+         <span target="#an_qeh2">Money</span>
+         <span target="#an_qeh3">Training</span>
+      </spanGrp>
+      <interpGrp>
+         <interp xml:id="funding">Funding problems and mecanisms</interp>
+      </interpGrp>
+   </standOff>
+   <text>
       <body>
-         <u ana="relance">vvv</u>
+         <u who="#interv1">Yes, so there we are. </u>
+         <u who="#interviewee">Yeah, please. </u>
+         <u who="#interv1">Thank you.</u>
+         <u who="#interviewee">No problem.</u>
+         <u who="#interv1">Thank you, <del>
+               <gap reason="anonymised"/>
+               <desc>[name has taken out from here]</desc>
+            </del> and it’s very good to see you and...</u>
+         <u who="#interviewee">Oh yeah! <vocal>
+               <desc>Laughs</desc>
+            </vocal></u>
+         <u who="#interv2">Maybe we need to start on the funding.</u>
+         <u who="#interviewee">Right.</u>
+         <!-- [...] -->
+         <u who="#interv1" ana="question_prepared">But that was one question I was going to ask you,
+            do you actually have the statistics that show the improvement in women’s and babies’
+            survival?</u>
+         <u who="#interviewee">That’s what I’ve been doing last week. </u>
+         <u who="#interv1" ana="agreement">Yeah. Oh!</u>
+         <u who="#interviewee">I just collected the data and I’ve already sent it to Scotland and we
+            want to have a look at it and see whether it’s making sense or not. What I have seen is
+            that surely... This is a fact, the maternal deaths are actually doing down. Sometimes
+            down to zero in a month.</u>
+         <u who="#interv1" ana="relaunch">In any particular...?</u>
+         <u who="#interviewee">Yeah, in all these three.</u>
+         <u who="#interv1" ana="precision">In all...?</u>
+         <u who="#interviewee">Yeah.</u>
+         <!-- [...] -->
+         <u who="#interviewee">
+            <seg xml:id="an_qeh1" ana="#funding">It’s extremely cheap but bringing in people from
+               other places, yes, that’s expensive because they’ll need accommodation and stuff like
+               that</seg> and this is why, just last week I went around to the same hospitals again,
+            I was trying to collect more data before so that we can actually say, this is the actual
+            impact of the courses. [...] </u>
+         <u who="#interv1"> And he resuscitated the patient? </u>
+         <u who="#interviewee"> The patient was okay and I said, wow! <seg xml:id="an_qeh2">So you
+               can see that people are really doing the impossibles</seg>, you know, so I think it’s
+            really a lifesaving course and I think it’s very... <seg xml:id="an_qeh3">It’s very very
+               important that they continue this training</seg> so that new people coming into the
+            hospital should be actually trained [...]. </u>
       </body>
-  </text>
+   </text>
 </TEI>
