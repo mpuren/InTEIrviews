@@ -42,7 +42,7 @@
                                 <moduleRef key="tei"/>
                                 <moduleRef key="textstructure"
                                         except="byline closer dateline docAuthor docDate docEdition docImprint docTitle epigraph floatingText front imprimatur opener postscript salute signed titlePage titlePart trailer"/>
-                                <moduleRef key="analysis" except="c cl m pc phr s span spanGrp w"/>
+                                <moduleRef key="analysis" except="c cl m pc phr s w"/>
                                 <moduleRef key="certainty" except=""/>
                                 <moduleRef key="corpus" except="derivation factuality"/>
                                 <moduleRef key="figures" except="notatedMusic"/>
