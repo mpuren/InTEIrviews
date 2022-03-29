@@ -1,3 +1,3 @@
 # inTEIrviews
 
-Creation of an XML-TEI chain well-suited for SSH interviews
+Creation of an ODD well-suited for SSH interviews
