@@ -1,0 +1,100 @@
+﻿User manual for InTEIrviews
+This manual provides instructions on how to use the "TEI for Interviews" XML-TEI template developed by Marie Puren and Florian Cafiero. This template is designed for encoding qualitative interviews for social sciences or oral history.
+
+
+Encoding qualitative interviews: key elements and structures        1
+TEI Header (<teiHeader>)        1
+Body (<body>)        2
+Schema Specification (<schemaSpec>)        2
+Module References (<moduleRef>)        2
+Specialized Elements and Attributes        3
+Encoding Transcriptions        4
+Customizing the TEI for Interviews Schema        4
+Understanding Your Requirements        4
+Modifying Existing Elements and Attributes        4
+Adding New Elements        4
+Removing Redundant Modules and Elements        5
+Handling Special Cases        5
+Documenting Your Customizations        5
+Validating Your Customized Schema        5
+Sharing Your Customizations        5
+
+
+Encoding qualitative interviews: key elements and structures
+This section provides a detailed overview of the key elements and structures within the TEI schema specifically designed for encoding interviews. Understanding these elements is crucial for effectively structuring and annotating interview data in TEI format.
+TEI Header (<teiHeader>)
+The TEI Header is a mandatory section in every TEI document. It includes metadata about the file and its content.
+* <fileDesc>: This element describes the file and contains sub-elements like <titleStmt>, <publicationStmt>, and <sourceDesc>.
+   * <titleStmt>: Contains the title of the interview and information about its author(s).
+   * <publicationStmt>: Provides details about the publication, including the publisher and availability of the document.
+   * <sourceDesc>: Describes the source of the interview, such as its origin or method of collection.
+Body (<body>)
+The body of a TEI document contains the actual content of the interview.
+* <head>: Represents the heading or title of the interview section.
+* <p>: Used for paragraphs, providing a basic structure for the text of the interview.
+
+
+Schema Specification (<schemaSpec>)
+The <schemaSpec> element in the TEI for Interviews schema is central to defining the customization of the TEI framework for interview encoding. It specifies which modules and elements are included in the schema, tailored specifically for the needs of interview transcription and analysis. Below is a detailed breakdown of its components and their roles:
+Module References (<moduleRef>)
+The <moduleRef> elements within <schemaSpec> identify the TEI modules that are included in this schema, along with any exceptions. Each module caters to different aspects of text encoding and provides specialized elements and attributes for various uses.
+* header Module:
+   * Focuses on metadata elements.
+   * Exception: Elements like handNote and hyphenation are excluded as they are less relevant to interview data.
+* core Module:
+   * Provides core structural elements like <div> and <p> which are essential for any TEI document.
+* tei Module:
+   * The base module, included by default, encompassing all fundamental TEI elements.
+* textstructure Module:
+   * Offers elements for organizing the textual content.
+   * Exception: Elements such as byline, docTitle, etc., are excluded as they are more suited for written texts than spoken interviews.
+* analysis Module:
+   * Enables detailed analysis of the text, such as linguistic annotations.
+   * Exception: Certain elements like c, s, and w are excluded, which might be more relevant to linguistic analysis of written texts.
+* certainty, corpus, figures, linking, namesdates Modules:
+   * These modules provide additional elements and attributes for specific types of annotations, linking, and handling of names and dates.
+* spoken Module:
+   * Specifically designed for spoken text, crucial for interviews.
+   * Exception: The broadcast element is excluded as it is more relevant for mass media contexts than personal interviews.
+* transcr Module:
+   * Focused on transcription-specific elements.
+   * Exception: Excludes elements like damage, handShift, surface, etc., which are more relevant to manuscript transcription.
+Specialized Elements and Attributes
+In addition to the modules, specific elements and attributes within those modules are crucial for interview encoding:
+* <u> (Utterance): From the <spoken> module, this element represents individual speech segments in an interview, allowing for the transcription of what each interviewee says.
+* <seg> (Segment): Useful for dividing text into thematic or topical segments, especially in the context of question-answer formats in interviews.
+* <said>: Another element from the <spoken> module, used for marking direct speech, which can be particularly useful for highlighting interviewee responses.
+* Attributes:
+   * @type: Used to specify the type or category of an element, such as the type of a note or a segment.
+   * @xml:lang: Indicates the language of a text segment, crucial for multilingual interviews.
+   * @who: Often used with <u>, to indicate which participant in the interview is speaking.
+Encoding Transcriptions
+* <transcription>: This element can be employed for providing detailed transcriptions of audio or video interviews, including non-verbal elements like pauses, laughter, etc.
+Customizing the TEI for Interviews Schema
+The TEI schema is highly adaptable. Users are encouraged to modify these elements and modules, adding new ones or adjusting existing ones to suit the unique requirements of their interview projects.
+Customization is a key feature of the TEI (Text Encoding Initiative) framework, allowing users to adapt the standard to their specific project needs. The TEI for Interviews schema, while tailored for interviews, can be further customized to suit the unique requirements of different research projects. This section provides guidance on how to modify and extend this schema.
+Understanding Your Requirements
+Before customizing the schema, it's important to clearly understand your project's requirements. Consider the following:
+* Nature of Interviews: Are they formal, informal, structured, unstructured?
+* Content Specifics: Are there unique thematic elements, linguistic features, or cultural nuances?
+* Analysis Goals: What kind of analysis or data extraction will you perform?
+Modifying Existing Elements and Attributes
+* Adapting Elements: Depending on your interviews, you may need to modify elements to capture specific data. For example, adding new attributes to the <u> element to denote emotional tone or speech speed.
+* Changing Attributes: Attributes like @type or @role can be modified to include additional categorizations relevant to your interviews.
+Adding New Elements
+* Custom Elements: If the standard TEI elements do not suffice, you can define custom elements. For instance, an element to mark technical interruptions or background noises in an interview setting. Make sure that there is no other option than to add another element.
+* Namespace Extension: When adding custom elements, it's recommended to define a separate namespace to avoid conflicts with standard TEI elements.
+Removing Redundant Modules and Elements
+* Streamlining: Remove modules or elements that are not relevant to your project to simplify the schema and make it more manageable.
+* Example: If your interviews do not include any multimedia elements, you might remove related modules or elements focusing on such content.
+Handling Special Cases
+* Non-verbal Communication: For interviews with significant non-verbal communication, consider adding elements to encode gestures, facial expressions, or pauses.
+* Multilingual Interviews: If your interviews are in multiple languages, ensure the schema can effectively handle different languages and scripts.
+Documenting Your Customizations
+* Maintain Documentation: Keep detailed records of all customizations for future reference and for others who might use your schema.
+* Updating the TEI Header: Reflect your customizations in the <teiHeader> for clarity on the schema's adaptations.
+Validating Your Customized Schema
+* Schema Validation: After customization, validate your schema to ensure it adheres to XML and TEI standards.
+* Testing: Test the schema with sample interview data to ensure it works as intended.
+Sharing Your Customizations
+* Community Contribution: Consider sharing your customizations with the TEI community, especially if they address common challenges in interview encoding.
